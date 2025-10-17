@@ -1,0 +1,167 @@
+:root {
+  --dark-bg: #223429;
+  --accent: #D9C9AD;
+  --light-text: #EDF4F2;
+  --hover-accent: #cbbf9f;
+}
+
+/* ==============================
+   Navbar Base
+=============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light-text);
+}
+
+.nav-logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.8rem;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-link:hover .nav-logo-img {
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(217,201,173,0.5);
+}
+
+.nav-logo-text {
+  font-family: "Courier New", monospace;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #D9C9AD, #cbbf9f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-logo-text:hover {
+  text-shadow: 0 0 8px #cbbf9f;
+}
+
+/* ==============================
+   Menu Items
+=============================== */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a .nav-icon {
+  font-size: 1.1rem;
+}
+
+.nav-menu a:hover {
+  color: var(--hover-accent);
+  transform: translateY(-2px);
+}
+
+.nav-menu a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ==============================
+   Hamburger Menu (Mobile)
+=============================== */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--light-text);
+}
+
+/* ==============================
+   Mobile Dropdown Menu
+=============================== */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--dark-bg);
+    flex-direction: column;
+    padding-top: 6rem;
+    gap: 2rem;
+    transition: right 0.4s ease, transform 0.4s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+    transform: skewY(-3deg);
+  }
+
+  .nav-menu.open {
+    right: 0;
+    transform: skewY(0deg);
+  }
+
+  .nav-menu li {
+    text-align: center;
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+}
+
+/* ==============================
+   Small Screens
+=============================== */
+@media (max-width: 430px) {
+  .nav-logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-menu a span {
+    font-size: 0.95rem;
+  }
+}

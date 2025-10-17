@@ -1,0 +1,28 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root font and color settings */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #EDF4F2;
+  color: #223429;
+  overflow-x: hidden;
+}
+
+/* Shared container for all sections */
+.page-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    padding: 2rem 1rem;
+  }
+}

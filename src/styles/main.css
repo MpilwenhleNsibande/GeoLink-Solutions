@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root font and color settings */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #EDF4F2;
+  color: #223429;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #EDF4F2;
+  color: #31473A;
+}
+
+main {
+  padding: 2rem;
+}
+
+.page-section {
+  margin: 4rem 0;
+}
+
+h1, h2, h3 {
+  color: #F4A259;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
